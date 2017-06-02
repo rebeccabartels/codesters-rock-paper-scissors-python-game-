@@ -1,0 +1,39 @@
+player = codesters.Sprite("cat")
+player.go_to(-100, -75)
+
+computer = codesters.Sprite("computer")
+computer.go_to(125, -75)
+#setting up the players choices 
+choice = player.ask("Choose rock, paper, or scissors")
+
+if choice == "rock":
+    sprite = codesters.Sprite("rock")
+    player.say("I choose rock")
+
+if choice == "paper":
+    sprite = codesters.Sprite("paper")
+    player.say("I choose paper")
+
+if choice == "scissors": 
+    sprite = codesters.Sprite("scissors")
+    player.say("I choose scissors")
+    
+sprite.go_to(-125, 140)
+random_choice = random.randint(1, 3)
+# setting up computer choices 
+if random_choice == 1:
+    sprite = codesters.Sprite("rock")
+    computer.say("I choose rock")
+    computer_choice = "rock"
+    
+if random_choice == 2:
+    sprite = codesters.Sprite("paper")
+    computer.say("I choose paper.")
+    computer_choice = "paper"
+
+if random_choice == 3: 
+    sprite = codesters.Sprite("scissors")
+    computer.say("I choose scissors.") 
+    computer_choice = "scissors"
+    
+sprite.go_to(125, 140) 
